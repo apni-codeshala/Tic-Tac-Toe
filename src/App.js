@@ -115,8 +115,8 @@ function App() {
       <Row>
         <Col md={6} className='offset-md-3'>
           {winMessage ? (
-            <div className='mb-2 mt-2'>
-              <h1 className='text-success text-uppercase text-center'>
+            <div className='mb-2 mt-2 block'>
+              <h1 className='text-success text-uppercase text-center div-border'>
                 {winMessage}
               </h1>
               <Button 
@@ -128,13 +128,13 @@ function App() {
               </Button>
             </div>
           ) : (
-            <h1 className='text-center text-warning'>
+            <h1 className='text-center text-warning div-border'>
               {isCross ? "Cross" : "Circle"} turns
             </h1>
           ) }
           <div className='grid'>
             {itemArray.map((item, index) => (
-              <Card color='warning' onClick={ () => changeItem(index) }>
+              <Card onClick={ () => changeItem(index) }>
                 <CardBody className='box'>
                   <Icon name={item} />
                 </CardBody>
